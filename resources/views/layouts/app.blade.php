@@ -14,6 +14,11 @@
       <!--Import materialize.css-->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
+      <!--INCLUSÃO DO BOOTSTRAP -->
+
+      <link rel="stylesheet" href="{{URL::asset('https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css')}}" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <script src="{{ asset('https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js')}}"></script>
+
       <link href="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.13.3/b-2.3.5/b-colvis-2.3.5/b-html5-2.3.5/b-print-2.3.5/datatables.min.css" rel="stylesheet"/>
       <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css">
       <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.3.5/css/buttons.dataTables.min.css">
@@ -31,9 +36,13 @@
         <div class="nav-wrapper orange darken-1">
       <a href="#" class="brand-logo">SiGALLS</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="sass.html">BACG</a></li>
-        <li><a href="badges.html">Gerenciamento</a></li>
-        <li><a href="collapsible.html">Reserva</a></li>
+        @if(Auth::check())
+          <li><a href="sass.html">BACG</a></li>
+          @if(Auth::user()->perfil <= 1)
+            <li><a href="badges.html">Gerenciamento</a></li>
+          @endif
+          <li><a href="collapsible.html">Reserva</a></li>
+        @endif
         <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Perfil<i class="material-icons right">arrow_drop_down</i></a></li>
       </ul>
     </div>

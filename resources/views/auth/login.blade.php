@@ -29,10 +29,16 @@
                 <input class='validate' type='password' name='password' id='password' />
                 <label for='password'>Entre com sua senha</label>
               </div>
-              <label style='float: right;'>
-                                <a class='pink-text' href='#!'><b>Esqueceu a senha?</b></a>
-                            </label>
             </div>
+
+             <div class='row'>
+              <div class='input-field col s12'>
+                <label>
+                <a class='pink-text' href='#!'><b>Esqueceu a senha?</b></a>
+              </label>
+              </div>
+            </div> 
+            
 
             <br />
             <center>

@@ -187,8 +187,8 @@ class ComposerStaticInit914186e9100b79d681f2d0be91f4f8a1
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
         'Zend\\Diactoros\\' => 
         array (
@@ -332,8 +332,8 @@ class ComposerStaticInit914186e9100b79d681f2d0be91f4f8a1
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Container\\' => 
         array (
@@ -393,8 +393,8 @@ class ComposerStaticInit914186e9100b79d681f2d0be91f4f8a1
         ),
         'Illuminate\\Notifications\\' => 
         array (
-            0 => __DIR__ . '/..' . '/laravel/slack-notification-channel/src',
-            1 => __DIR__ . '/..' . '/laravel/nexmo-notification-channel/src',
+            0 => __DIR__ . '/..' . '/laravel/nexmo-notification-channel/src',
+            1 => __DIR__ . '/..' . '/laravel/slack-notification-channel/src',
         ),
         'Illuminate\\' => 
         array (
@@ -507,14 +507,30 @@ class ComposerStaticInit914186e9100b79d681f2d0be91f4f8a1
     );
 
     public static $classMap = array (
+        'App\\Carteira' => __DIR__ . '/../..' . '/app/Carteira.php',
+        'App\\Cautela' => __DIR__ . '/../..' . '/app/Cautela.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\Diretoria' => __DIR__ . '/../..' . '/app/Diretoria.php',
+        'App\\Espaco' => __DIR__ . '/../..' . '/app/Espaco.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
+        'App\\Http\\Controllers\\CarteiraController' => __DIR__ . '/../..' . '/app/Http/Controllers/CarteiraController.php',
+        'App\\Http\\Controllers\\CautelaController' => __DIR__ . '/../..' . '/app/Http/Controllers/CautelaController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\DiretoriaController' => __DIR__ . '/../..' . '/app/Http/Controllers/DiretoriaController.php',
+        'App\\Http\\Controllers\\EspacoController' => __DIR__ . '/../..' . '/app/Http/Controllers/EspacoController.php',
+        'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
+        'App\\Http\\Controllers\\LivroController' => __DIR__ . '/../..' . '/app/Http/Controllers/LivroController.php',
+        'App\\Http\\Controllers\\MaterialController' => __DIR__ . '/../..' . '/app/Http/Controllers/MaterialController.php',
+        'App\\Http\\Controllers\\MensalidadeController' => __DIR__ . '/../..' . '/app/Http/Controllers/MensalidadeController.php',
+        'App\\Http\\Controllers\\PiscinaController' => __DIR__ . '/../..' . '/app/Http/Controllers/PiscinaController.php',
+        'App\\Http\\Controllers\\PrestadorController' => __DIR__ . '/../..' . '/app/Http/Controllers/PrestadorController.php',
+        'App\\Http\\Controllers\\ReservaController' => __DIR__ . '/../..' . '/app/Http/Controllers/ReservaController.php',
+        'App\\Http\\Controllers\\ServicoController' => __DIR__ . '/../..' . '/app/Http/Controllers/ServicoController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\CheckForMaintenanceMode' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckForMaintenanceMode.php',
@@ -523,11 +539,18 @@ class ComposerStaticInit914186e9100b79d681f2d0be91f4f8a1
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Livro' => __DIR__ . '/../..' . '/app/Livro.php',
+        'App\\Material' => __DIR__ . '/../..' . '/app/Material.php',
+        'App\\Mensalidade' => __DIR__ . '/../..' . '/app/Mensalidade.php',
+        'App\\Piscina' => __DIR__ . '/../..' . '/app/Piscina.php',
+        'App\\Prestador' => __DIR__ . '/../..' . '/app/Prestador.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'App\\Reserva' => __DIR__ . '/../..' . '/app/Reserva.php',
+        'App\\Servico' => __DIR__ . '/../..' . '/app/Servico.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'BeyondCode\\DumpServer\\DumpServerCommand' => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/src/DumpServerCommand.php',

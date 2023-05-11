@@ -27,7 +27,7 @@
             .bg {
               /* The image used */
 
-              background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/imagens/fundo.jpg");
+              background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("/imagens/fundo.jpg");
 
               filter: blur(6px);
                 -webkit-filter: blur(6px);
@@ -76,9 +76,10 @@
         </div>
         <img class="circle responsive-img imagem" src="imagens/alss.png">
         <div class="bg-text">
-          <h5>Sistema de Gerenciamento da</h2>
+          <h5>Bem Vindo a</h2>
           <h4 style="font-size:50px">Área de Lazer dos Suboficiais e Sargentos</h1>
-          <a href="{{route('login')}}">Clique aqui para entrar!</a>
+          <a href="{{route('login')}}" class="btn-floating btn-large waves-effect waves-light blue accent-3 pulse"><i class="material-icons">screen_lock_landscape</i></a><br>
+          <small>Entrar</small>
         </div>
         <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
