@@ -7,14 +7,16 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'SiGALLS') }}</title>
-
+    <title>{{ config('app.name', 'SiGAL') }}</title>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
       <!--INCLUSÃO DO BOOTSTRAP -->
+
+
 
       <link rel="stylesheet" href="{{URL::asset('https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css')}}" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
       <script src="{{ asset('https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js')}}"></script>
@@ -25,7 +27,17 @@
 
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    
+      <style type="text/css">
+        .scrolling-wrapper-flexbox {
+          display: flex;
+          flex-wrap: nowrap;
+          overflow-x: auto;
+
+          .card {
+            flex: 0 0 auto;
+          }
+        }
+      </style>
 </head>
 <body>
             <!-- Dropdown Structure -->
@@ -33,7 +45,7 @@
           <li><a href="{{ route('sair') }}">Sair</a></li>
         </ul>
       <nav> 
-        <div class="nav-wrapper orange darken-1">
+        <div class="nav-wrapper  blue darken-4">
       <a href="#" class="brand-logo">SiGALLS</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         @if(Auth::check())
@@ -65,7 +77,7 @@
   </ul>
   <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
-    <div class="container">
+    <div class="container-fluid">
         @yield('content')
     </div>
 

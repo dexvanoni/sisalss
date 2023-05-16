@@ -4,11 +4,11 @@
 <div class="section"></div>
   <main>
     <center>
-        <img class="circle responsive-img" width="180px" src="imagens/alss.png">
+        <img class="circle responsive-img" width="180px" src="imagens/alma.png">
       <div class="section"></div>
 
       <div class="container">
-        <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+        <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE; width: 400px;">
 
           <form method="POST" action="{{ route('login') }}">
                         @csrf
