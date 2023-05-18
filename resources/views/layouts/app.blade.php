@@ -46,37 +46,39 @@
         </ul>
       <nav> 
         <div class="nav-wrapper  blue darken-4">
-      <a href="#" class="brand-logo">SiGALLS</a>
+      <a href="#" class="brand-logo">SiGAL - Sistema de Gerenciamento de Área de Lazer</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         @if(Auth::check())
-          <li><a href="sass.html">BACG</a></li>
-          @if(Auth::user()->perfil <= 1)
-            <li><a href="badges.html">Gerenciamento</a></li>
-          @endif
-          <li><a href="collapsible.html">Reserva</a></li>
+        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">@if(is_null(Auth::user()->nguerra)) Sr(a). {{Auth::user()->name}} @else {{Auth::user()->posto}} {{Auth::user()->nguerra}} @endif<i class="material-icons right">arrow_drop_down</i></a></li>
         @endif
-        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Perfil<i class="material-icons right">arrow_drop_down</i></a></li>
       </ul>
     </div>
       </nav>
-
+@if(Auth::check())
   <ul id="slide-out" class="sidenav">
     <li><div class="user-view">
       <div class="background">
-        <img src="images/office.jpg">
+        <img src="imagens/back.png">
       </div>
-      <a href="#user"><img class="circle" src="images/yuna.jpg"></a>
-      <a href="#name"><span class="white-text name">John Doe</span></a>
-      <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+      <a href="#user"><img class="circle" src="imagens/soldado.jpg"></a>
+
+      <a href="#name"><span class="white-text name">@if(is_null(Auth::user()->nguerra)) {{Auth::user()->name}} @else {{Auth::user()->posto}} {{Auth::user()->nguerra}} @endif</span></a>
+      <a href="#email"><span class="white-text email"> @if(is_null(Auth::user()->funcao)) {{Auth::user()->categoria}} - {{Auth::user()->area}} @else {{Auth::user()->funcao}} - {{Auth::user()->area}}@endif</span></a>
     </div></li>
-    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-    <li><a href="#!">Second Link</a></li>
-    <li><div class="divider"></div></li>
-    <li><a class="subheader">Subheader</a></li>
-    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+    @if (Auth::user()->perfil < 2)
+    <li><a href="#!"><i class="material-icons">person</i>Usuários</a></li>
+    <li><a href="#!"><i class="material-icons">person</i>Reservas</a></li>
+    <li><a href="#!"><i class="material-icons">person</i>Diretorias</a></li>
+    <li><a href="#!"><i class="material-icons">person</i>Espaços</a></li>
+    <li><a href="#!"><i class="material-icons">person</i>Materiais</a></li>
+    <li><a href="#!"><i class="material-icons">person</i>Esportes e Serviços</a></li>
+    <li><a href="#!"><i class="material-icons">person</i>Piscina</a></li>
+    @else
+    <li><a href="#!"><i class="material-icons">person</i>Reservas</a></li>
+    @endif
   </ul>
   <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-
+  @endif
     <div class="container-fluid">
         @yield('content')
     </div>
